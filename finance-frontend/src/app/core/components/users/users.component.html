@@ -1,0 +1,84 @@
+<div>
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <mtc-sidebar></mtc-sidebar>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <mtc-header></mtc-header>
+            <!-- End of Topbar -->
+
+            <!-- Table -->
+           <div *ngIf="isAdmin">
+            <table class="table">
+              <thead>
+                <tr> 
+                  <th>Id</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Departement</th>
+                  <th>RIB</th>
+                 
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Existing users -->
+                <tr *ngFor="let user of users; let i = index">
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.lastname }}</td>
+                  <td>{{ user.departement }}</td>
+                  <td>{{ user.rib }}</td>
+                  <td>
+                    <button (click)="deleteUser(i)" cButton color="warning" variant="outline">Delete</button>
+                  </td>
+                </tr>
+              
+                
+                <!-- New user row -->
+                <tr *ngIf="showAddRow">
+                  <td><input type="text" class="form-control" [(ngModel)]="newUser.id" disabled></td>
+                  <td><input type="email" class="form-control" [(ngModel)]="newUser.name"></td>
+                  <td><input type="text" class="form-control" [(ngModel)]="newUser.lastname"></td>
+                  <td><input type="text" class="form-control" [(ngModel)]="newUser.departement"></td>
+                  <td><input type="text" class="form-control" [(ngModel)]="newUser.rib"></td>
+                  <td>
+                    <button class="btn btn-success btn-sm mr-1" (click)="saveUser()">Save</button>
+                    <button class="btn btn-secondary btn-sm" (click)="cancelAdd()">Cancel</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <!-- Add new user button -->
+           
+              <button  class="btn btn-primary" (click)="addNewRow()">Add User</button>
+         
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Finance Actia 2024</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+</div>

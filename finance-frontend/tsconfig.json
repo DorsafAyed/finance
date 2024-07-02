@@ -1,0 +1,79 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "paths": {
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@guards/*": [
+        "src/app/shared/guards/*"
+      ],
+      "@models/*": [
+        "src/app/shared/models/*"
+      ],
+      "@router/*": [
+        "src/app/core/router/*"
+      ],
+      "@services/*": [
+        "src/app/shared/services/*"
+      ],
+      "@template/*": [
+        "src/app/core/template"
+      ],
+      "@store/*": [
+        "src/app/shared/store/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@provider/*": [
+        "src/app/shared/providers/*"
+      ],
+      "@mapper/*": [
+        "src/app/shared/mapper/*"
+      ],
+      "@dto/*": [
+        "src/app/shared/dto/*"
+      ],
+      "@pipe/*": [
+        "src/app/shared/pipe/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@i18n/*": [
+        "src/app/shared/i18n/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

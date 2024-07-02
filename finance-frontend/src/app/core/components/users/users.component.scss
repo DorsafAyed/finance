@@ -1,0 +1,72 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  button {
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #UserListTable {
+    margin: 0 auto;
+  }
+  
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+  }
+  button.color-danger {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+  }
+  
+  button.color-warning {
+    background-color: #ffc107;
+    color: black;
+    border-color: #ffc107;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }

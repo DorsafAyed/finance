@@ -1,0 +1,6 @@
+.gradle
+node_modules
+e2e
+src
+.editorconfig
+*.md
